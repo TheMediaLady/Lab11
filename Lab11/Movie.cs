@@ -6,54 +6,23 @@ using System.Threading.Tasks;
 
 namespace Lab11
 {
-    class Movie
+    class Movie//This class/added classes toll you what to do specifically with each instance.
     {
-        public string title { get; private set; }
-        public string category { get; private set; }
+        private readonly string _title;
+        private readonly string _category;
 
-        public Movie(string title)
-        
-       
+        public Movie(string title, string category)
         {
-            this.title = title;
-            this.category = category;
-     
-       
-            
-            string[] masterList = new string[14];
-            masterList[0] = "Star Wars";
-            masterList[1] = "2001: A Space Odyssey ";
-            masterList[2] = "E.T. The Extra-terrestrial";
-            masterList[3] = "A Clockwork Orange";
-            masterList[4] = "Close Encounters of the Thirk Kind";
-            masterList[5] = "Jungle Book";
-            masterList[6] = "Aristocats";
-            masterList[7] = "Bullwinkle";
-            masterList[8] = "The Pursuit of Happyness";
-            masterList[9] = "Fight Club";
-            masterList[10] = "The Godfather";
-            masterList[11] = "Halloween";
-            masterList[12] = "Friday the 13th";
-            masterList[13] = "Jaws";
-         
-
-
+            _title = title;
+            _category = category;
         }
 
 
-        public string Names { get; set; }
+        public string Title { get { return _title; } }
 
-        public string Category()
+        public string Category
         {
-            string[] movieCategory = new string[4];
-            movieCategory[0] = "Animated";
-            movieCategory[1] = "Drama";
-            movieCategory[2] = "Horror";
-            movieCategory[3] = "SciFi";
-
-            return title;
-            
+            get { return _category; }
         }
-        
     }
 }
